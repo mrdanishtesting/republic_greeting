@@ -197,9 +197,9 @@
         const validNames = ["fiza", "fizha", "fizha khan", "fiza khan"];
 
         if (validNames.includes(name)) {
-            if (todayDate === userBirthday) {
+            // if (todayDate === userBirthday) {
                 // Birthday message and images
-                document.getElementById('greetingText').style.display = 'none';
+                 document.getElementById('greetingText').style.display = 'none';
                 birthdayMessageDiv.textContent = `🎉 Happy Birthday, ${name}! 🎂 Today is your special day!`;
                 birthdayMessageDiv.style.display = 'block';
                 birthdayPic.style.display = 'block';
@@ -209,10 +209,10 @@
 
                 // Change message every 5 seconds
                 changeMessage(name);
-            } else {
-                notBirthdayMessageDiv.textContent = `Hello, ${name}. Today is ${today.toLocaleDateString()}, but it's not your birthday.`;
-                notBirthdayMessageDiv.style.display = 'block';
-            }
+            // } else {
+            //     notBirthdayMessageDiv.textContent = `Hello, ${name}. Today is ${today.toLocaleDateString()}, but it's not your birthday.`;
+            //     notBirthdayMessageDiv.style.display = 'block';
+            // }
         } else {
             notBirthdayMessageDiv.textContent = `Hello, ${name}. Today is not your special day, but we hope it's a wonderful one nonetheless! Happy Republic Day!`;
             notBirthdayMessageDiv.style.display = 'block';
