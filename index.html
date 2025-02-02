@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Checker</title>
+  <title>Heart💔 🥀</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-image: url('image/flag.jpg'); /* Replace with the actual image URL */
+      background-image: url('image/sunset.jpg'); /* Replace with the actual image URL */
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center center; /* Centers the image */
     background-attachment: fixed; /* Makes the background fixed when scrolling */
@@ -23,7 +23,7 @@
     .birthday-card {
       max-width: 400px;
       padding: 20px;
-      background: #fff;
+      background: none;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
@@ -40,7 +40,7 @@
     .not-birthday {
       margin-top: 20px;
       font-size: 1.2rem;
-      color: #dc3545;
+      color: black;
     }
 
     .birthday-pic, .second-image {
@@ -134,17 +134,23 @@
         transform: translateX(20px);
       }
     }
+
+    /* .btn-flag {
+    background: linear-gradient(to right, red, white,red); /* Example: French flag */
+    border: none;
+    color: BLUE;
+  } */
   </style>
 </head>
 <body>
   <div class="birthday-card">
-    <h1 id="greetingText"  class="mb-4">Happy Republic Day</h1>
+    <h1 id="greetingText"  class="mb-4">Hey! Miss_Breeze</h1>
     <form id="birthdayForm">
       <div class="mb-3">
         <label for="nameInput" class="form-label">Enter Your Name:</label>
         <input type="text" id="nameInput" class="form-control" placeholder="Your Name" required>
       </div>
-      <button type="submit" class="btn btn-primary w-100">submit</button>
+      <button type="submit" class="btn btn-primary w-100 btn-flag">Submit</button>
     </form>
     <div id="birthdayMessage" class="birthday-message" style="display: none;"></div>
     
@@ -194,15 +200,15 @@
         const todayDate = `${today.getDate()}-${today.getMonth() + 1}`; // Months are 0-indexed
 
         const userBirthday = "26-1"; // 26th January
-        const validNames = ["fiza", "fizha", "fizha khan", "fiza khan"];
+        const validNames = ["fiza", "fizha", "fizha khan", "fiza khan","miss breeze","Miss Breeze","kaju","Kaju"];
 
         if (validNames.includes(name)) {
             // if (todayDate === userBirthday) {
                 // Birthday message and images
                  document.getElementById('greetingText').style.display = 'none';
-                birthdayMessageDiv.textContent = `🎉 Happy Birthday, ${name}! 🎂 Today is your special day!`;
+                birthdayMessageDiv.textContent = `🎉 Hey, ${name}. Thanks for open ,You have some message from md danish`;
                 birthdayMessageDiv.style.display = 'block';
-                birthdayPic.style.display = 'block';
+                //birthdayPic.style.display = 'block';
                 secondImage.style.display = 'block';
                 balloonContainer.style.display = 'block';
                 addBalloons();
@@ -210,12 +216,12 @@
                 // Change message every 5 seconds
                 changeMessage(name);
             // } else {
-            //     notBirthdayMessageDiv.textContent = `Hello, ${name}. Today is ${today.toLocaleDateString()}, but it's not your birthday.`;
+            //     notBirthdayMessageDiv.textContent = `Hello, ${name}. Thanks for open this You have a some message`;
             //     notBirthdayMessageDiv.style.display = 'block';
             // }
         } else {
-            notBirthdayMessageDiv.textContent = `Hello, ${name}. Today is not your special day, but we hope it's a wonderful one nonetheless! Happy Republic Day!`;
-            notBirthdayMessageDiv.style.display = 'block';
+          notBirthdayMessageDiv.textContent = `Sorry, ${name} this is not for you. This  is only for Miss Breeze!`;
+          notBirthdayMessageDiv.style.display = 'block';
         }
     }
 });
@@ -234,12 +240,11 @@ function addBalloons() {
 function changeMessage(name) {
     const birthdayMessageDiv = document.getElementById('birthdayMessage');
     const messages = [
-        `🎉 Happy Birthday, ${name}! 🎂 Today is your special day!`,
-        `🎂 You are the most amazing person I’ve ever met, and being with you gives me feelings I’ve never experienced before, ${name}! 🎉`,
-        `🎂 On your special day, I hope you feel surrounded by love and joy. Have the happiest birthday! ${name}! 🎉`,
-        `🎉 Wishing you all the best on your birthday, ${name}! 🎂`,
-        `🎂 Cheers to another year of awesomeness, ${name}! 🎉`,
-        `🎂 And wish you happy republic day, ${name}! 🎉`
+        `jahan muhabbatt ho jake poochon ...ki jisko milna tha kya mila haiiii`,
+        `jahan bhi dil 💚 ho use bata do ki toot jaana likha hua haiin!💔`,
+        `💔 jo toot jao to kya hua dil ,💔`,
+        `🥀tu ladla hai hum sabhal lenge `,
+        ` 💔 hum to janme hai shikwe dil se,jigar ke tukde hai pallenge🥀`
     ];
 
     let index = 0;
@@ -247,7 +252,7 @@ function changeMessage(name) {
     setInterval(function() {
         birthdayMessageDiv.textContent = messages[index];
         index = (index + 1) % messages.length; // Loop through the messages
-    }, 5000); // Change message every 5 seconds
+    }, 10000); // Change message every 5 seconds
 }
 
 
