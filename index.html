@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-image: url('image/sunset.jpg'); /* Replace with the actual image URL */
+      background-image: url('image/birthday_background.jpg'); /* Replace with the actual image URL */
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center center; /* Centers the image */
     background-attachment: fixed; /* Makes the background fixed when scrolling */
@@ -33,7 +33,7 @@
     .birthday-message {
       margin-top: 20px;
       font-size: 1.5rem;
-      color: #28a745;
+      color: red;
       font-weight: bold;
     }
 
@@ -45,9 +45,9 @@
 
     .birthday-pic, .second-image {
       margin-top: 50px;
-      border-radius: 60%;
-      width: 110px;
-      height: 170px;
+      border-radius: 100%;
+      width: 150px;
+      height: 300px;
       object-fit: cover;
       display: none;
     }
@@ -144,7 +144,7 @@
 </head>
 <body>
   <div class="birthday-card">
-    <h1 id="greetingText"  class="mb-4">Hey! Miss_Breeze</h1>
+    <h1 id="greetingText"  class="mb-4">Hello I am Danish </h1>
     <form id="birthdayForm">
       <div class="mb-3">
         <label for="nameInput" class="form-label">Enter Your Name:</label>
@@ -156,8 +156,10 @@
     
     <!-- Image Container with Two Images -->
     <div class="image-container">
-      <img id="birthdayPic" class="birthday-pic" src="image\fizha_2.jpg" alt="Birthday Pic">
-      <img id="secondImage" class="second-image" src="image\fizha_3.jpg" alt="Second Image">
+      <!-- <img id="birthdayPic" class="birthday-pic" src="image\fizha_2.jpg" alt="Birthday Pic">
+      <img id="secondImage" class="second-image" src="image\fizha_3.jpg" alt="Second Image"> -->
+      <img id="birthdayPic" class="birthday-pic" src="image\saniya_.jpg" alt="Birthday Pic">
+      <img id="secondImage" class="second-image" src="image\all.jpg" alt="Second Image">
     </div>
     
     <div id="notBirthdayMessage" class="not-birthday" style="display: none;"></div>
@@ -200,15 +202,18 @@
         const todayDate = `${today.getDate()}-${today.getMonth() + 1}`; // Months are 0-indexed
 
         const userBirthday = "26-1"; // 26th January
-        const validNames = ["fiza", "fizha", "fizha khan", "fiza khan","miss breeze","Miss Breeze","kaju","Kaju"];
+        //const validNames = ["fiza", "fizha", "fizha khan", "fiza khan","miss breeze","Miss Breeze","kaju","Kaju"];
+        const validNames = ["saniya", "Saniya", "Saniya Mansoori","SANIYA"];
 
         if (validNames.includes(name)) {
             // if (todayDate === userBirthday) {
                 // Birthday message and images
                  document.getElementById('greetingText').style.display = 'none';
-                birthdayMessageDiv.textContent = `🎉 Hey, ${name}. Thanks for open ,You have some message from md danish`;
+               // birthdayMessageDiv.textContent = `🎉 Hey, ${name}. Thanks for open ,You have some message from md danish`;
+                birthdayMessageDiv.textContent = `🎉 Happy Birthday Bhabhi`;
+
                 birthdayMessageDiv.style.display = 'block';
-                //birthdayPic.style.display = 'block';
+                birthdayPic.style.display = 'block';
                 secondImage.style.display = 'block';
                 balloonContainer.style.display = 'block';
                 addBalloons();
@@ -220,7 +225,7 @@
             //     notBirthdayMessageDiv.style.display = 'block';
             // }
         } else {
-          notBirthdayMessageDiv.textContent = `Sorry, ${name} this is not for you. This  is only for Miss Breeze!`;
+          notBirthdayMessageDiv.textContent = `Sorry, ${name} Today is not your special day. This  is only for Mrs Saniya Mansoori(bhabhi)!`;
           notBirthdayMessageDiv.style.display = 'block';
         }
     }
@@ -240,11 +245,10 @@ function addBalloons() {
 function changeMessage(name) {
     const birthdayMessageDiv = document.getElementById('birthdayMessage');
     const messages = [
-        `jahan muhabbatt ho jake poochon ...ki jisko milna tha kya mila haiiii`,
-        `jahan bhi dil 💚 ho use bata do ki toot jaana likha hua haiin!💔`,
-        `💔 jo toot jao to kya hua dil ,💔`,
-        `🥀tu ladla hai hum sabhal lenge `,
-        ` 💔 hum to janme hai shikwe dil se,jigar ke tukde hai pallenge🥀`
+      `🎉 Happy Birthday, bhabhi 🎂 Today is your special day!`,
+      `🎂 Enjoy every moment, bhabhi 🎉 Let's celebrate!`,
+      `🎉 On your special day, I hope you feel surrounded by love and joy. Have the happiest birthday!, bhabhi 🎂`,
+      `🎂 Cheers to another year of awesomeness, bhabhi 🎉`
     ];
 
     let index = 0;
@@ -255,6 +259,23 @@ function changeMessage(name) {
     }, 10000); // Change message every 5 seconds
 }
 
+// function changeMessage(name) {
+//     const birthdayMessageDiv = document.getElementById('birthdayMessage');
+//     const messages = [
+//         `jahan muhabbatt ho jake poochon ...ki jisko milna tha kya mila haiiii`,
+//         `jahan bhi dil 💚 ho use bata do ki toot jaana likha hua haiin!💔`,
+//         `💔 jo toot jao to kya hua dil ,💔`,
+//         `🥀tu ladla hai hum sabhal lenge `,
+//         ` 💔 hum to janme hai shikwe dil se,jigar ke tukde hai pallenge🥀`
+//     ];
+
+//     let index = 0;
+    
+//     setInterval(function() {
+//         birthdayMessageDiv.textContent = messages[index];
+//         index = (index + 1) % messages.length; // Loop through the messages
+//     }, 10000); // Change message every 5 seconds
+// }
 
   
 
